@@ -83,9 +83,9 @@ def scoreboard(textx,texty,gameOverMessage):
     screen.blit(tex,(textx,texty))
 
 
-def game_over():
+def game_message():
     text = font1.render("Game Over",True,(255,255,255))
-    screen.blit(text,(300,350))
+    screen.blit(text,(150,300))
 
 def collision(enemyX,bulletX,enemyY,bulletY):
     distance = math.sqrt(math.pow(enemyX - bulletX, 2)+ math.pow(enemyY - bulletY, 2))
@@ -202,8 +202,8 @@ while game_over is not True:
 
     # if ecoordsy or (ecoordsy*1.3 + 35) or (ecoordsy*0.69 + 35) or (ecoordsy*0.3 + 5) > 800:
         # print("game over")
-    if ecoordsy > 5:
-        game_over()
+    if ecoordsy > 650:
+        game_message()
     # if score >= 50:
     #     enemy(enem,ecoordsx*0.04 - 4,ecoordsy*0.03 + 3)
     # if score >= 60:
